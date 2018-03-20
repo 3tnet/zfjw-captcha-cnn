@@ -1,5 +1,5 @@
 syntax = "proto3";
-package ImageToLabel;
+package imageToLabel;
 service ImageToLabel {
   rpc GetImageLabel(Image) returns (Label){}
 }

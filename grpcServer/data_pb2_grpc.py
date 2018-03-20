@@ -15,7 +15,7 @@ class ImageToLabelStub(object):
       channel: A grpc.Channel.
     """
     self.GetImageLabel = channel.unary_unary(
-        '/ImageToLabel.ImageToLabel/GetImageLabel',
+        '/imageToLabel.ImageToLabel/GetImageLabel',
         request_serializer=data__pb2.Image.SerializeToString,
         response_deserializer=data__pb2.Label.FromString,
         )
@@ -42,5 +42,5 @@ def add_ImageToLabelServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'ImageToLabel.ImageToLabel', rpc_method_handlers)
+      'imageToLabel.ImageToLabel', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

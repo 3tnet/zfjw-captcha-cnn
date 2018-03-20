@@ -17,9 +17,9 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='data.proto',
-  package='ImageToLabel',
+  package='imageToLabel',
   syntax='proto3',
-  serialized_pb=_b('\n\ndata.proto\x12\x0cImageToLabel\"\x1b\n\x05Image\x12\x12\n\nimageBytes\x18\x01 \x01(\x0c\"\x16\n\x05Label\x12\r\n\x05label\x18\x01 \x01(\t2K\n\x0cImageToLabel\x12;\n\rGetImageLabel\x12\x13.ImageToLabel.Image\x1a\x13.ImageToLabel.Label\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\ndata.proto\x12\x0cimageToLabel\"\x1b\n\x05Image\x12\x12\n\nimageBytes\x18\x01 \x01(\x0c\"\x16\n\x05Label\x12\r\n\x05label\x18\x01 \x01(\t2K\n\x0cImageToLabel\x12;\n\rGetImageLabel\x12\x13.imageToLabel.Image\x1a\x13.imageToLabel.Label\"\x00\x62\x06proto3')
 )
 
 
@@ -27,13 +27,13 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _IMAGE = _descriptor.Descriptor(
   name='Image',
-  full_name='ImageToLabel.Image',
+  full_name='imageToLabel.Image',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='imageBytes', full_name='ImageToLabel.Image.imageBytes', index=0,
+      name='imageBytes', full_name='imageToLabel.Image.imageBytes', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -58,13 +58,13 @@ _IMAGE = _descriptor.Descriptor(
 
 _LABEL = _descriptor.Descriptor(
   name='Label',
-  full_name='ImageToLabel.Label',
+  full_name='imageToLabel.Label',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='label', full_name='ImageToLabel.Label.label', index=0,
+      name='label', full_name='imageToLabel.Label.label', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -93,14 +93,14 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Image = _reflection.GeneratedProtocolMessageType('Image', (_message.Message,), dict(
   DESCRIPTOR = _IMAGE,
   __module__ = 'data_pb2'
-  # @@protoc_insertion_point(class_scope:ImageToLabel.Image)
+  # @@protoc_insertion_point(class_scope:imageToLabel.Image)
   ))
 _sym_db.RegisterMessage(Image)
 
 Label = _reflection.GeneratedProtocolMessageType('Label', (_message.Message,), dict(
   DESCRIPTOR = _LABEL,
   __module__ = 'data_pb2'
-  # @@protoc_insertion_point(class_scope:ImageToLabel.Label)
+  # @@protoc_insertion_point(class_scope:imageToLabel.Label)
   ))
 _sym_db.RegisterMessage(Label)
 
@@ -108,7 +108,7 @@ _sym_db.RegisterMessage(Label)
 
 _IMAGETOLABEL = _descriptor.ServiceDescriptor(
   name='ImageToLabel',
-  full_name='ImageToLabel.ImageToLabel',
+  full_name='imageToLabel.ImageToLabel',
   file=DESCRIPTOR,
   index=0,
   options=None,
@@ -117,7 +117,7 @@ _IMAGETOLABEL = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='GetImageLabel',
-    full_name='ImageToLabel.ImageToLabel.GetImageLabel',
+    full_name='imageToLabel.ImageToLabel.GetImageLabel',
     index=0,
     containing_service=None,
     input_type=_IMAGE,
