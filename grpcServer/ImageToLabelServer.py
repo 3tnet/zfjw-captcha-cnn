@@ -10,7 +10,7 @@ sys.path.append(os.path.join(os.path.split(os.path.realpath(__file__))[0], '..')
 import ImageToLabel
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
-_HOST = 'localhost'
+_HOST = '[::]'
 _PORT = '8080'
 
 class ImageToLabelServer(data_pb2_grpc.ImageToLabelServicer):
