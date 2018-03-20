@@ -4,7 +4,9 @@ import time
 import grpc
 import data_pb2, data_pb2_grpc
 import sys
-sys.path.append('../')
+import os
+
+sys.path.append(os.path.join(os.path.split(os.path.realpath(__file__))[0], '..'))
 import ImageToLabel
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
