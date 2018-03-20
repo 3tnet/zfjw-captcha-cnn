@@ -1,0 +1,15 @@
+syntax = "proto3";
+package ImageToLabel;
+service ImageToLabel {
+  rpc GetImageLabel(Image) returns (Label){}
+}
+message Image {
+  bytes imageBytes = 1;
+}
+
+message Label {
+  string label  = 1;
+}
+
+
+// python -m grpc_tools.protoc -I./proto --python_out=xx --grpc_python_out=xx data.proto
