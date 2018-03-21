@@ -4,9 +4,16 @@ import glob
 import os
 import pickle
 import math
+import io
+from PIL import Image
 
-def getCharArray(image):
-  img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+def bytesToCv2Image(imageBytes):
+  img = Image.open(io.BytesIO(imageBytes))
+  return np.asarray(img)
+
+def getCharArray(img):
+  if (len(img.shape) == 3):
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
   img = cv2.GaussianBlur(img, (3, 3), 0) # 高斯模糊
   _, img = cv2.threshold(img, 125, 255, cv2.THRESH_BINARY)  #对图像进行二值化操作
   imgArray = np.array(img)

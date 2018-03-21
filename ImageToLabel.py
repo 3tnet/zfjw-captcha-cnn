@@ -15,8 +15,7 @@ class ImageToLabel:
     self.sess = tf.Session()
     self.saver.restore(self.sess, os.path.join(currentPath, './ckpt/zfjwc_captcha_tensor_data.ckpt-1200'))
   def getImageLabel(self, imageBytes):
-    imageBytesArray = np.array(bytearray(imageBytes), dtype="uint8") 
-    image = cv2.imdecode(imageBytesArray, cv2.IMREAD_COLOR)
+    image = utils.bytesToCv2Image(imageBytes)
     imageArray = utils.getCharArray(image)
     label = ''
     for i in range(4):
@@ -30,5 +29,3 @@ class ImageToLabel:
     return label
   def __del__(self):
     self.sess.close()
-
-
