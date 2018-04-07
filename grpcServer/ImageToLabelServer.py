@@ -13,10 +13,13 @@ _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 _HOST = '[::]'
 _PORT = '8080'
 
+
 class ImageToLabelServer(data_pb2_grpc.ImageToLabelServicer):
-  imageToLabel = ImageToLabel.ImageToLabel()
-  def GetImageLabel(self, request, context):
-      return data_pb2.Label(label = self.imageToLabel.getImageLabel(request.imageBytes))
+    imageToLabel = ImageToLabel.ImageToLabel()
+
+    def GetImageLabel(self, request, context):
+        return data_pb2.Label(label=self.imageToLabel.getImageLabel(request.imageBytes))
+
 
 def serve():
     grpcServer = grpc.server(futures.ThreadPoolExecutor(max_workers=4))
@@ -28,6 +31,7 @@ def serve():
             time.sleep(_ONE_DAY_IN_SECONDS)
     except KeyboardInterrupt:
         grpcServer.stop(0)
+
 
 if __name__ == '__main__':
     serve()
