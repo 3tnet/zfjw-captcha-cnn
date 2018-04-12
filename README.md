@@ -25,7 +25,7 @@
 
 # 返回
 
-```json
+```javascript
     {'code': 1, 'captcha_label': '返回的验证码字符串'}
 ```
 ```json
