@@ -1,12 +1,7 @@
 from concurrent import futures
 import time
-
 import grpc
-import data_pb2, data_pb2_grpc
-import sys
-import os
-
-sys.path.append(os.path.join(os.path.split(os.path.realpath(__file__))[0], '..'))
+import grpcServer.data_pb2 as data_pb2, grpcServer.data_pb2_grpc as data_pb2_grpc
 import ImageToLabel
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24

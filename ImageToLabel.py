@@ -25,8 +25,7 @@ class ImageToLabel:
                 'input_image:0': imageArray[i].reshape(1, 22 * 12),
                 'input_label:0': np.zeros((1, 36)),
                 'keep_prob:0': 1.0
-            }
-                                        )
+            })
             label += utils.ontHotToChar(outputLable[0])
         return label
 

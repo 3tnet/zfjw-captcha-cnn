@@ -1,6 +1,6 @@
 from concurrent import futures
 import grpc
-import data_pb2, data_pb2_grpc
+import grpcServer.data_pb2 as data_pb2, grpcServer.data_pb2_grpc as data_pb2_grpc
 
 _HOST = 'localhost'
 _PORT = '8080'
