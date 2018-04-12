@@ -28,9 +28,9 @@
 ```javascript
     {'code': 1, 'captcha_label': '返回的验证码字符串'}
 ```
-```json
+```javascript
     {'code': -1, 'captcha_label': '验证码文件有误'}
 ```
-```json
+```javascript
     {'code': -1, 'captcha_label': '请上传验证码文件'}
 ```
