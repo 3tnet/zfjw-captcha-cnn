@@ -21,23 +21,23 @@ python httpServer/imageToLabelServer.py
 |:-|:-|:-|
 |/image_to_label|文件字段名 captcha|传入验证码文件返回验证码字符|
 
-# 返回
+## 返回
 
-```javascript
+```json
 {
-    'code': 1,
-    'captcha_label': '返回的验证码字符串'
+    "code": 1,
+    "captcha_label": "返回的验证码字符串"
 }
 ```
-```javascript
+```json
 {
-    'code': -1,
-    'captcha_label': '验证码文件有误'
+    "code": -1,
+    "captcha_label": "验证码文件有误"
 }
 ```
-```javascript
+```json
 {
-    'code': -1,
-    'captcha_label': '请上传验证码文件'
+    "code": -1,
+    "captcha_label": "请上传验证码文件"
 }
 ```
